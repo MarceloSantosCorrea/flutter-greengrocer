@@ -103,11 +103,11 @@ class SignInScreen extends StatelessWidget {
                           ),
                         ),
                         onPressed: () {
-                          // Navigator.of(context).pushReplacement(
-                          //   MaterialPageRoute(builder: (_) {
-                          //     return const BaseScreen();
-                          //   }),
-                          // );
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(builder: (_) {
+                              return const BaseScreen();
+                            }),
+                          );
                         },
                         child: const Text(
                           'Entrar',
