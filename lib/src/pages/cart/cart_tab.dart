@@ -89,7 +89,7 @@ class _CartTabState extends State<CartTab> {
                     style: ElevatedButton.styleFrom(
                       primary: CustomColors.customSwatchColor,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16),
+                        borderRadius: BorderRadius.circular(18),
                       ),
                     ),
                     onPressed: () async {
