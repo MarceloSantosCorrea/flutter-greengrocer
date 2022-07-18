@@ -45,9 +45,17 @@ class _CartTabState extends State<CartTab> {
               physics: const BouncingScrollPhysics(),
               itemCount: app_data.cartItems.length,
               itemBuilder: (_, index) {
+                final cartItem = app_data.cartItems[index];
+
                 return CartTile(
                   cartItem: app_data.cartItems[index],
-                  remove: removeItemFromCart,
+                  updatedQuantity: (qtd) {
+                    if (qtd == 0) {
+                      removeItemFromCart(app_data.cartItems[index]);
+                    } else {
+                      setState(() => cartItem.quantity = qtd);
+                    }
+                  },
                 );
               },
             ),
